@@ -101,7 +101,7 @@ def encrypt_text(text, key):
     return cipher.encrypt(text.encode()).decode()
 
 def decrypt_text(encrypted_text, key):
-    try:
+    try:    
         cipher = Fernet(generate_key(key))
         return cipher.decrypt(encrypted_text.encode()).decode()
     except:
